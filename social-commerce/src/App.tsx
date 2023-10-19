@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Signup from './Component1/Onboarding/Signup/Signup';
 
 function App() {
   return (
     <div className="App">
-        
+        <Signup/>
     </div>
   );
 }
