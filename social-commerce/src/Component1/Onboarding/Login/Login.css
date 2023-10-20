@@ -1,0 +1,117 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.mainWrap{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginText{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6%;
+}
+
+.LoginText h1{
+    color: #1877f2;
+    font-size: 50px;
+}
+
+.LoginText span{
+    font-size: 22px;
+    margin-left: 135px;
+    color: #1c1e21;
+}
+
+.LoginInput{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginInputBox{
+    width: 60%;
+    height: 55%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginInputBoxWrap{
+    width: 93%;
+    height: 93%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.LoginInputBoxWrap input{
+    width: 100%;
+    height: 16%;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    outline: none;
+}
+
+.LoginInputBoxWrap input:focus{
+    border: 2px solid #1877f2;
+}
+
+.LoginInputBoxWrap button{
+    width: 100%;
+    height: 15%;
+    background-color: #1877f2;
+    color: white;
+    border-radius: 6px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.LoginInputBoxWrap p{
+    color: #1877f2;
+    margin-bottom: 6px;
+}
+
+.LoginInputBoxWrap p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.grayLine{
+    width: 100%;
+    height: 0.01em;
+    background-color: gray;
+}
+
+.LoginInputBoxWrap .SignUpButton{
+    width: 50%;
+    height: 16%;
+    background-color: #42b72a;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+}
