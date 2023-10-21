@@ -34,6 +34,7 @@ const ForgetPassword = () => {
                         <input type="text" {...field} className='ForgetPasswordInput' placeholder='Enter your email or phone number' />
                     }
                 />
+                {errors.email && <p>{errors?.email?.message}</p>}
                 <button className='ForgetPasswordButton' onSubmit={handleSubmit(onSubmit)}>Submit</button>
                 <div className='ForgetPasswordBackToLogin'>
                     <p onClick={()=> navigate('/login')} >Back login </p>
