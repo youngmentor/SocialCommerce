@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
+// import { DevTool } from "@hookform/devtools";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
 
@@ -83,7 +83,7 @@ const Login = () => {
               {errors.password?.message && `${errors.password.message}`}
             </p>
           </div>
-          <DevTool control={control} />
+          {/* <DevTool control={control} /> */}
         </div>
       </div>
     </>
