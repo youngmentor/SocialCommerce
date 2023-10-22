@@ -114,6 +114,9 @@ const Signup = () => {
             </div>
           </div>
         </div>
+        <section className='signUpWriteUp'>
+          <h1>WRITE UP FOR SIGN UP</h1>
+        </section>
       </div>
 
     </>
