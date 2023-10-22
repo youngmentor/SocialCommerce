@@ -72,9 +72,9 @@ const Login = () => {
                   className={errors.password ? "inputError" : ""}
                 />
                 <button>Log in</button>
-                <p>Forgotten password?</p>
+                <p onClick={() => navigate("/")}>Forgotten password?</p>
                 <hr className="LogingrayLine" />
-                <button className="LSignUpButton" onClick={() => navigate("/")}>Create new account</button>
+                <button className="LSignUpButton" onClick={() => navigate("/signup")}>Create new account</button>
               </div>
             </form>
             <p className="errors">
