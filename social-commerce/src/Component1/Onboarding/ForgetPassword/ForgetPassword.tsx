@@ -5,8 +5,10 @@ import { forgotPasswordSchema } from '../../SCHEMA/schema';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { Forminput } from '../../TYPE/type.check';
 import { useNavigate } from 'react-router-dom';
+import { useMutation } from 'react-query';
+import { forgetPassword } from '../../API/mutation';
 const ForgetPassword = () => {
-    const navigate= useNavigate()
+    const navigate = useNavigate()
     const { control, handleSubmit, formState: { errors }, reset } = useForm<Forminput>({
         defaultValues: {
             email: "",
@@ -17,8 +19,17 @@ const ForgetPassword = () => {
         console.log(data);
         reset();
     };
+    const {} = useMutation(["forgetpassword"], forgetPassword, {
+        onSuccess: ()=>{
+
+        },
+        onError: ()=>{
+            
+        },
+    })
     return (
         <div className='ForgetPasswordMain'>
+            <h1>Social  Commerce</h1>
             <div className='ForgetPasswordWrap'>
                 <h3>Forget Password</h3>
                 <hr className='ForgetPasswordGreyLine' />
@@ -28,15 +39,21 @@ const ForgetPassword = () => {
                     </p>
                 </div>
                 <Controller
-                    name='email'
                     control={control}
-                    render={({ field }) =>
-                        <input type="text" {...field} className='ForgetPasswordInput' placeholder='Enter your email or phone number' />
-                    }
+                    render={({ field }) => (
+                        <input
+                            type="text"
+                            {...field}
+                            className='ForgetPasswordInputs'
+                            placeholder="Enter your email address or mobile number "
+                        />
+                    )}
+                    name='email'
                 />
-                <button className='ForgetPasswordButton' onSubmit={handleSubmit(onSubmit)}>Submit</button>
+                 {errors.email && <p style={{color: "red"}}>{errors?.email?.message}</p>}
+                <button className='ForgetPasswordButton' onClick={handleSubmit(onSubmit)}>Submit</button>
                 <div className='ForgetPasswordBackToLogin'>
-                    <p onClick={()=> navigate('/login')} >Back login </p>
+                    <button className='ForgetPasswordBackToLoginButton' onClick={() => navigate('/login')} >Back login </button>
                 </div>
             </div>
 
