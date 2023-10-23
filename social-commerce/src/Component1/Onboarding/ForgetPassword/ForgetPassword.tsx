@@ -19,12 +19,12 @@ const ForgetPassword = () => {
         console.log(data);
         reset();
     };
-    const {} = useMutation(["forgetpassword"], forgetPassword, {
-        onSuccess: ()=>{
+    const { } = useMutation(["forgetpassword"], forgetPassword, {
+        onSuccess: () => {
 
         },
-        onError: ()=>{
-            
+        onError: () => {
+
         },
     })
     return (
@@ -50,7 +50,7 @@ const ForgetPassword = () => {
                     )}
                     name='email'
                 />
-                 {errors.email && <p style={{color: "red"}}>{errors?.email?.message}</p>}
+                {errors.email && <p style={{ color: "red" }}>{errors?.email?.message}</p>}
                 <button className='ForgetPasswordButton' onClick={handleSubmit(onSubmit)}>Submit</button>
                 <div className='ForgetPasswordBackToLogin'>
                     <button className='ForgetPasswordBackToLoginButton' onClick={() => navigate('/login')} >Back login </button>
