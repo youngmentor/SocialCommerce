@@ -3,12 +3,13 @@
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    background: #5e60ce;
 }
 
 .signUpMain {
-    width: 27%;
-    height: 70%;
+    width: 30%;
+    height: 73%;
     background: white;
     border-radius: 7px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -186,10 +187,15 @@
     width: 50%;
     height: 60%;
     border-radius: 5px;
-    background: #00a400;
+    background: #5e60ce;
     color: white;
     border: none;
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+}
+
+.signUpWriteUp{
+    width: 30%;
+    height: 20%;
 }
